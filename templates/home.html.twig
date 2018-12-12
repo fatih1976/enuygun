@@ -1,0 +1,44 @@
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<h2>dolar:</h2>
+<p>{{ fx_rates.dolar }}</p>
+
+
+
+    <h2>euro:</h2>
+    <p>{{ fx_rates.euro }}</p>
+
+
+
+    <h2>sterlin:</h2>
+    <p>{{ fx_rates.sterlin }}</p>
+
+
+    <hr/>
+
+    pariteleri guncellemek icin: <br/>
+    <h2>php bin/console app:parite-updater</h2>
+
+    <hr/>
+
+
+
+    <h2>yeni bir API eklemek icin:</h2>
+    <p>
+        <b>/src/EnUygunCore/ApiClasses</b> klasorunun altinda API classlari var.<br/>
+        Yeni bir api eklemek icin bu klasor icerisine <b>ApiInterface</b>'i <br/>
+        implement eden yeni bir API class / AdapterClass<br/>
+        koyulmasi yeterlidir.
+        <br><br>
+        Incelemek icin ExchangeRateUpdaterFacade işin<br> yonetildigi ana classtir.
+    </p>
+
+    <hr/>
+    <p>
+        Hata kontrol - exception handling <b>yapılmamıştır</b>.
+    </p>
+
+{% endblock %}
