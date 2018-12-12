@@ -6,6 +6,6 @@
 #    defaults: { _controller: 'App\Controller\DefaultController::index' }
 
 home:
-    path: /home
+    path: /
     defaults: { _controller: 'App\Controller\HomeController::index' }
 
